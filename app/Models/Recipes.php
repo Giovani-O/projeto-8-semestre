@@ -9,4 +9,19 @@ class Recipes extends Model
 {
     use HasFactory;
     protected $table = 'recipes';
+
+    function deleteById($id)
+    {
+        return Recipes::destroy($id);
+    }
+
+    function getById($id)
+    {
+        return Recipes::where('id', $id)->get();
+    }
+
+    function getByName($name)
+    {
+        return Recipes::where('name', $name)->get();
+    }
 }

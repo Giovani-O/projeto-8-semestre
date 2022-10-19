@@ -27,3 +27,16 @@ Route::controller(RecipesController::class)->group(function () {
 Route::controller(RecipesController::class)->group(function () {
     Route::get('/recipes', 'index');
 });
+
+
+Route::controller(RecipesController::class)->group(function () {
+    Route::post('/recipes/delete', [RecipesController::class, 'deleteById']);
+});
+
+Route::controller(RecipesController::class)->group(function() {
+    Route::post('/recipes/getbyid', [RecipesController::class, 'getById']);
+});
+
+Route::controller(RecipesCOntroller::class)->group(function() {
+    Route::post('recipes/getbyname', [RecipesController::class, 'getByName']);
+});
