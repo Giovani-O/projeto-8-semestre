@@ -24,4 +24,9 @@ class Recipes extends Model
     {
         return Recipes::where('name', $name)->get();
     }
+
+    function getAll() 
+    {
+        return Recipes::all();
+    }
 }

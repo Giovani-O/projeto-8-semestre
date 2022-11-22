@@ -40,3 +40,7 @@ Route::controller(RecipesController::class)->group(function() {
 Route::controller(RecipesCOntroller::class)->group(function() {
     Route::post('recipes/getbyname', [RecipesController::class, 'getByName']);
 });
+
+Route::controller(RecipesCOntroller::class)->group(function() {
+    Route::get('recipes/getall', [RecipesController::class, 'getAll']);
+});

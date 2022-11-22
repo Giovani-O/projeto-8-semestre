@@ -44,6 +44,13 @@ class RecipesController extends Controller
         return $recipes->getByName($request->name);
     }
 
+    public function getAll() 
+    {
+        $recipes = new Recipes;
+
+        return $recipes->getAll();
+    }
+
     public function index()
     {
         $recipes = new Recipes();
